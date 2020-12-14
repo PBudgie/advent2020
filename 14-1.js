@@ -1,5 +1,3 @@
-//11346481113447 too high
-
 const fs = require('fs')
 const input = fs.readFileSync("./14-input.txt").toString().split("mask = ")
 var mem = {}
@@ -34,7 +32,6 @@ function applyBitMask(bitMask, decimalNum) {
         zeroesToPad = "0" + zeroesToPad
     }
     decimalAsBin = zeroesToPad + decimalAsBin
-    //console.log("(" + bitMask + ", " + decimalNum + " - " + decimalAsBin + ")")
 
     //Apply bit mask
     for(var i = 0; i < bitMask.length; i++) {
@@ -44,6 +41,5 @@ function applyBitMask(bitMask, decimalNum) {
     }
 
     //Return as the decimal number to write after bitmasking
-    //console.log(" => " + decimalAsBin + " - " + parseInt(decimalAsBin, 2))
     return parseInt(decimalAsBin, 2)
 }
